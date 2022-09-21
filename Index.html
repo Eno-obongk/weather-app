@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="SheCodeplus.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0">
+    <link rel="stylesheet" href="SheCodeplus.js">
+</head>
+<body>
+  <div class="container">
+    <form id="search-form" id="search-form">
+      <div class="row">
+        <div class="col-6">
+      <input type="text" placeholder="Search for a City" autocomplete="off" autofocus="on" 
+      id="city-input" class="form-control shadow sm">
+    </div>
+    <div class="col-3">
+      <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm">
+    </div>
+
+  <div class="col-3">
+     <button class=" form-control btn btn-success shadow-sm w-100" id="current-location-button">current</button>
+  </div>
+     </form> 
+   
+ <div class="d-flex justify-content-between bg-border">
+      <div class="weather-app">
+       <h2></h2>
+       </div>  
+</div>
+
+ <div class="row m-5">
+  <div class="col-4">
+<div class="clearfix">
+  <div class="float-left">
+    <h1 class="red" id="city">paris</h1>
+   <h3 class="red"> Tuesday Aug 16, 16:00, 2022</h3>
+   </div>
+  </div>
+</div>
+
+<div class="col-4 p-0 m-0">
+  <p class="red low"> Low </p>
+   <p class="red1" > High </p>
+   <ul class="dot"> 
+   <li class="cloudy">☁ </li> 
+    <li class="clou">Cloudy</li>
+    <span class="temp"> 23<sup>0</sup>c</span>
+    </ul>
+  
+</div>
+
+<div class="col-4">
+  <div class="floatright">
+  <ul class="dot">
+    <li class="red">Precip: 16%</li>
+    <li class="red" >Humidity: 96%</li>
+    <li class="red"> Wind: 6km/h</li>
+  </ul>
+</div>
+     </div>
+ </div>
+
+<div class="row m-2">
+  <div class="col-2">
+       <p class="red"> <strong>FRI</strong> </p>
+       <ul class="dot" >
+        <li>🌨</li>
+        <li>20<sup>0</sup> 19 <sup>0</sup> </li>
+       </ul>
+    </div> 
+ 
+    <div class="col-2">
+          <p class="red" > <strong>SAT</strong> </p>
+          <ul class="dot">
+           <li>🌧</li>
+           <li> 11 <sup>0</sup> 20 <sup>0</sup> </li>
+           </ul>
+   </div>
+
+  <div class="col-2">
+        <p class="red" > <strong>SUN</strong> </p>
+        <ul class="dot">
+         <li>🌩</li>
+         <li> 7 <sup>0</sup> 10 <sup>0</sup> </li>
+        </ul>
+  </div>
+
+<div class="col-2">
+    <p class="red" > <strong>MON</strong> </p>
+    <ul class="dot">
+    <li>🌪</li>
+    <li> 2 <sup>0</sup> 12 <sup>0</sup> </li>
+    </ul>
+ </div>
+
+<div class="col-2">
+        <p  class="red"> <strong>TUE</strong> </p>
+        <ul class="dot" >
+        <li>⭐</li>
+        <li> 2 <sup>0</sup> 3 <sup>0</sup> </li>
+    </ul>
+ </div>
+</div>
+</div>
+</div>
+<script>
+
+function search(event) {
+   event.preventDefault();
+
+  let cityElement = document.querySelector("#city");
+  let cityInput = document.querySelector("#city-input");
+  cityElement.innerHTML= cityInput.value; 
+}
+
+let searchform = document.querySelector("#search-form");
+searchform.addEventListener("submit",search);
+
+</script>
+
+
+</body>
+</html>
+
